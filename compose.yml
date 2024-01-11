@@ -1,0 +1,9 @@
+services:
+  redis:
+    image: redis:alpine
+
+  yopass:
+    image: jhaals/yopass
+    ports:
+      - "1337:1337"
+    command: "--database=redis --redis=redis://redis:6379/0"
