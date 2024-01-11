@@ -15,7 +15,7 @@ services:
     restart: unless-stopped
     ports:
       - ${YOPASS_PORT}:1337
-    command: "--database=redis --redis=redis://redis:6379/0"
+    command: "--database=redis --redis=redis://redis:6379/0 --metrics-port=8080"
     logging: *logging
 
   prometheus:
